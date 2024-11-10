@@ -231,7 +231,7 @@ function Projects() {
         {
             name: "Comparative Evaluation of Energy Efficiency in Large Language Models",
             date: "Oct 2024",
-            link: "https://github.com/adam-bouafia/greenlab-course-project",
+            link: "https://github.com/adam-bouafia/Comparative-Evaluation-of-Energy-Efficiency-in-LLM",
             description: [
                 "Repository for the Project of Green Lab (A.A. 2024-2025) at Vrije Universiteit Amsterdam. This project analyzes energy efficiency improvements across versions of various large language models.",
             ],
