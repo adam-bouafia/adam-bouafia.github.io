@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga4';
 
 export class AboutAdam extends Component {
-
     constructor() {
         super();
         this.screens = {};
@@ -39,7 +38,6 @@ export class AboutAdam extends Component {
 
         // google analytics
         ReactGA.send({ hitType: "pageview", page: `/${screen}`, title: "Custom Title" });
-
 
         this.setState({
             screen: this.screens[screen],
@@ -105,7 +103,6 @@ export default AboutAdam;
 export const displayAboutAdam = () => {
     return <AboutAdam />;
 }
-
 
 function About() {
     return (
@@ -223,8 +220,80 @@ function Skills() {
 function Projects() {
     const project_list = [
         {
-            name: "Gas Monitoring System",
+            name: "Helm Guide",
             date: "Oct 2024",
+            link: "https://github.com/adam-bouafia/Helm-Guide",
+            description: [
+                "A comprehensive guide to Helm, covering installation, architecture, chart structure, templating, hooks, and lifecycle management, aimed at simplifying Kubernetes deployments.",
+            ],
+            domains: ["kubernetes", "helm", "devops"]
+        },
+        {
+            name: "Comparative Evaluation of Energy Efficiency in Large Language Models",
+            date: "Oct 2024",
+            link: "https://github.com/adam-bouafia/greenlab-course-project",
+            description: [
+                "Repository for the Project of Green Lab (A.A. 2024-2025) at Vrije Universiteit Amsterdam. This project analyzes energy efficiency improvements across versions of various large language models.",
+            ],
+            domains: ["energy-efficiency", "large-language-models", "experiment-runner"]
+        },
+        {
+            name: "L'Aquila Smart Road Platform",
+            date: "Jul 2024",
+            link: "https://github.com/adam-bouafia/L-Aquila-Smart-Roads",
+            description: [
+                "A monitor violation detection system built with Spring Boot and Angular, designed for managing vehicular violations and tracking offender records in a microservices architecture.",
+            ],
+            domains: ["spring-boot", "angular", "microservices"]
+        },
+        {
+            name: "MangaWorld Full Stack Application (SOSE)",
+            date: "Jul 2024",
+            link: "https://github.com/adam-bouafia/MangaWorld-Full-Stack-Application",
+            description: [
+                "Full stack application employing microservices architecture with Spring Boot and React. Consul and Eureka are used for service registration.",
+            ],
+            domains: ["spring-boot", "react", "microservices", "eureka"]
+        },
+        {
+            name: "Vehicle Routing Problem with Heterogeneous Locker Boxes (VRPHLB)",
+            date: "Jun 2024",
+            link: "https://github.com/adam-bouafia/NetworkOptimization-VRPHLB-Project",
+            description: [
+                "Project involving the implementation of VRPHLB using Mixed-Integer Linear Programming (MILP) to optimize last-mile delivery.",
+            ],
+            domains: ["optimization", "vrp", "milp"]
+        },
+        {
+            name: "BlogFeedBack-Comment-Prediction",
+            date: "Jun 2024",
+            link: "https://github.com/adam-bouafia/BlogFeedBack-Comment-Prediction-Analysis",
+            description: [
+                "Machine learning project predicting the number of comments a blog post will receive in the next 24 hours using regression techniques.",
+            ],
+            domains: ["machine-learning", "data-analysis", "blog"]
+        },
+        {
+            name: "3D Environment Modeling with Scenic 3.0",
+            date: "Jun 2024",
+            link: "https://github.com/adam-bouafia/Scenic3.0-3D-Modeling-Analysis",
+            description: [
+                "Repository for the Project of Automated Verification of Cyber-Physical Systems, includes Scenic code examples for 3D object placement and simulation.",
+            ],
+            domains: ["3d-modeling", "cyber-physical-systems", "scenic"]
+        },
+        {
+            name: "Financial Services Application",
+            date: "May 2024",
+            link: "https://github.com/adam-bouafia/Securing-SOAP-and-REST-Services-with-Apache-CXF-",
+            description: [
+                "Comprehensive example of integrating Apache CXF with Spring Boot to create a secure web services platform. Features currency conversion, loan calculation, and investment prediction.",
+            ],
+            domains: ["spring-boot", "soap", "rest", "apache-cxf"]
+        },
+        {
+            name: "Gas Monitoring System",
+            date: "Feb 2024",
             link: "https://github.com/adam-bouafia/Gas-Monitoring-System",
             description: [
                 "Gas Monitoring System - IoT Project with Node-RED, InfluxDB and Telegram-Bot using MAPE-K Architecture. Real-time data processing, visualization and integration with a Telegram bot for notifications.",
@@ -233,7 +302,7 @@ function Projects() {
         },
         {
             name: "Smart Fan Project - SE4IOT",
-            date: "Sep 2024",
+            date: "Feb 2024",
             link: "https://github.com/adam-bouafia/Smart-Fan-Project",
             description: [
                 "IoT solution for optimizing environmental conditions through real-time temperature and humidity control. Developed with Node-RED, MQTT, InfluxDB, Grafana, and Telegram for notifications.",
@@ -241,26 +310,8 @@ function Projects() {
             domains: ["iot", "node-red", "mqtt", "influxdb", "grafana"]
         },
         {
-            name: "M3ak-Mobile-Application",
-            date: "Aug 2024",
-            link: "https://github.com/adam-bouafia/M3ak-Mobile-Application-Prototype",
-            description: [
-                "M3ak App Prototype - Safe Shake mode to alert loved ones by shaking the phone, sending an alert SMS to selected contacts. Promotes safety and fights against gender-based violence.",
-            ],
-            domains: ["mobile-app", "flutter", "safety"]
-        },
-        {
-            name: "GramApp-Detect-API",
-            date: "Jul 2024",
-            link: "https://github.com/adam-bouafia/GramApp-Detect-API",
-            description: [
-                "Leveraging NLP for Enhanced Text Analysis - Provides grammar checking, sentiment analysis, and language detection capabilities using advanced NLP techniques.",
-            ],
-            domains: ["nlp", "text-analysis", "api"]
-        },
-        {
             name: "Model Driven Engineering (MDE) Coursework - 2023/2024",
-            date: "Jun 2024",
+            date: "Jan 2024",
             link: "https://github.com/adam-bouafia/Model-Driven-Engineering-MDE-Projects",
             description: [
                 "Collection of projects showcasing the application of model-driven engineering principles including UML, EMF, OCL, and model transformations.",
@@ -269,7 +320,7 @@ function Projects() {
         },
         {
             name: "AI Heuristics and Q-learning, Alpha-Beta pruning Learning Projects",
-            date: "May 2024",
+            date: "Dec 2023",
             link: "https://github.com/adam-bouafia/AI-Heuristics-Q-Learning-Projects",
             description: [
                 "Collection of AI projects exploring heuristic methods, Q-learning, and Alpha-Beta pruning. Includes Hex Game Solver, MyChef, and other AI applications.",
@@ -278,7 +329,7 @@ function Projects() {
         },
         {
             name: "Health Informatics and Data Collaboration (HIDC) - Software Quality Engineering Homework (Univaq)",
-            date: "Apr 2024",
+            date: "Dec 2023",
             link: "https://github.com/adam-bouafia/HIDC-Project-SQE",
             description: [
                 "Assignments focusing on UML software modeling and performance analysis for the Research Infrastructure for Big Data and Social Mining (SoBigData) system.",
@@ -286,51 +337,25 @@ function Projects() {
             domains: ["uml", "software-quality", "performance-analysis"]
         },
         {
-            name: "Financial Services Application",
-            date: "Mar 2024",
-            link: "https://github.com/adam-bouafia/Securing-SOAP-and-REST-Services-with-Apache-CXF-",
+            name: "GramApp-Detect-API",
+            date: "Jun 2023",
+            link: "https://github.com/adam-bouafia/GramApp-Detect-API",
             description: [
-                "Comprehensive example of integrating Apache CXF with Spring Boot to create a secure web services platform. Features currency conversion, loan calculation, and investment prediction.",
+                "Leveraging NLP for Enhanced Text Analysis - Provides grammar checking, sentiment analysis, and language detection capabilities using advanced NLP techniques.",
             ],
-            domains: ["spring-boot", "soap", "rest", "apache-cxf"]
+            domains: ["nlp", "text-analysis", "api"]
         },
         {
-            name: "3D Environment Modeling for Falsification and Beyond with Scenic 3.0",
-            date: "Feb 2024",
-            link: "https://github.com/adam-bouafia/Scenic3.0-3D-Modeling-Analysis",
+            name: "M3ak-Mobile-Application",
+            date: "Feb 2023",
+            link: "https://github.com/adam-bouafia/M3ak-Mobile-Application-Prototype",
             description: [
-                "Repository for the Project of Automated Verification of Cyber-Physical Systems, includes Scenic code examples for 3D object placement and simulation.",
+                "M3ak App Prototype - Safe Shake mode to alert loved ones by shaking the phone, sending an alert SMS to selected contacts. Promotes safety and fights against gender-based violence.",
             ],
-            domains: ["3d-modeling", "scenic", "cyber-physical-systems"]
-        },
-        {
-            name: "BlogFeedBack-Comment-Prediction",
-            date: "Jan 2024",
-            link: "https://github.com/adam-bouafia/BlogFeedBack-Comment-Prediction-Analysis",
-            description: [
-                "Machine learning project predicting the number of comments a blog post will receive in the next 24 hours using regression techniques.",
-            ],
-            domains: ["machine-learning", "data-analysis", "blog"]
-        },
-        {
-            name: "Vehicle Routing Problem with Heterogeneous Locker Boxes (VRPHLB)",
-            date: "Dec 2023",
-            link: "https://github.com/adam-bouafia/NetworkOptimization-VRPHLB-Project",
-            description: [
-                "Project involving the implementation of VRPHLB using Mixed-Integer Linear Programming (MILP) to optimize last-mile delivery.",
-            ],
-            domains: ["optimization", "vrp", "milp"]
-        },
-        {
-            name: "MangaWorld Full Stack Application (SOSE)",
-            date: "Nov 2023",
-            link: "https://github.com/adam-bouafia/MangaWorld-Full-Stack-Application",
-            description: [
-                "Full stack application employing microservices architecture with Spring Boot and React. Consul and Eureka are used for service registration.",
-            ],
-            domains: ["spring-boot", "react", "microservices", "eureka"]
+            domains: ["mobile-app", "flutter", "safety"]
         }
     ];
+
 
     const tag_colors = {
         "javascript": "yellow-300",
@@ -387,32 +412,44 @@ function Projects() {
 
     return (
         <>
-            <div class="projects">
-                {project_list.map((project, index) => (
-                    <div key={index} class="project-card">
-                        <h3>{project.name}</h3>
-                        <p><strong>Date:</strong> {project.date}</p>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">Project Link</a>
-                        <ul>
-                            {project.description.map((desc, idx) => (
-                                <li key={idx}>{desc}</li>
-                            ))}
-                        </ul>
-                        <div class="tags">
-                            {project.domains.map((domain, idx) => (
-                                <span key={idx} class={`tag ${tag_colors[domain]}`}>{domain}</span>
-                            ))}
-                        </div>
-                    </div>
-                ))}
+            <div className="font-medium text-2xl mt-2 mb-4">Projects</div>
+            <div className="flex flex-col">
+                {
+                    project_list.map((project, index) => (
+                        <a 
+                            key={index} 
+                            href={project.link} 
+                            target="_blank" 
+                            rel="noreferrer" 
+                            className="flex flex-col p-4 border border-gray-50 hover:bg-opacity-5 my-2 rounded transition duration-200"
+                        >
+                            <div className="flex justify-between items-center">
+                                <div className="text-lg font-semibold">{project.name}</div>
+                                <div className="text-sm text-gray-400">{project.date}</div>
+                            </div>
+                            <p className="text-sm mt-1">{project.description}</p>
+                            <div className="flex flex-wrap mt-2">
+                                {
+                                    project.domains.map((domain, idx) => (
+                                        <span 
+                                            key={idx} 
+                                            className={`px-2 py-1 mr-2 mt-1 rounded-full border text-xs ${tag_colors[domain]}`}
+                                        >
+                                            {domain}
+                                        </span>
+                                    ))
+                                }
+                            </div>
+                        </a>
+                    ))
+                }
             </div>
         </>
     );
 }
 
-
 function Resume() {
     return (
         <iframe className="h-full w-full" src="./files/Adam-Bouafia-Resume.pdf" title="Adam Bouafia Resume" frameBorder="0"></iframe>
     )
-}
+}    
