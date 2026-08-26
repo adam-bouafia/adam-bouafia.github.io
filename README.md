@@ -1,7 +1,24 @@
-# Web simulation of UbuntuOS
+# Web simulation of Fedora Workstation
 
-This is a personal portfolio website of theme Ubuntu 20.04, made using Next.js & tailwind CSS.
+This is a personal portfolio website themed after Fedora Workstation (GNOME), made using Next.js & tailwind CSS.
 If you want to edit this. Clone this project and edit the files in `/src/components`.
+
+## Theming
+
+The palette lives in `tailwind.config.js`. Accent colours come from the Fedora brand
+(Fedora Blue `#3C6EB4`, Dark Blue `#294172`, Light Blue `#51A2DA`); neutrals and status
+colours come from GNOME Adwaita. Tokens are prefixed `fd-` (backgrounds), `fdt-` (text)
+and `fdb-` (borders). Icons live in `public/themes/Adwaita/`.
+
+### Asset licensing
+
+- Wallpapers in `public/images/wallpapers/` are the official Fedora backgrounds, used
+  under CC-BY-SA 4.0 / CC-BY 4.0. See `public/images/wallpapers/ATTRIBUTION.md`.
+- `public/themes/Adwaita/status/fedora_logo.svg` and `fedora_wordmark.svg` are original
+  redrawings, not copies of the `fedora-logos` package (which is under a restricted
+  trademark licence limited to approved Fedora spins). Fedora and the Infinity design
+  logo are trademarks of Red Hat, Inc.; they are used here referentially to indicate the
+  theme and do not imply endorsement. See `public/themes/Adwaita/ATTRIBUTION.md`.
 
 To run this on localhost
 type `npm start` and when u are done coding type `npm run build` to build your app.

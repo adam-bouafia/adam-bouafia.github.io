@@ -7,24 +7,24 @@ export default function Status() {
       <span className="mx-1.5">
         <img
           width="16px" height="16px"
-          src="./themes/Yaru/status/network-wireless-signal-good-symbolic.svg"
-          alt="ubuntu wifi"
+          src="./themes/Adwaita/status/network-wireless-signal-good-symbolic.svg"
+          alt="wifi"
           className="inline status-symbol w-4 h-4"
         />
       </span>
       <span className="mx-1.5">
         <img
           width="16px" height="16px"
-          src="./themes/Yaru/status/audio-volume-medium-symbolic.svg"
-          alt="ubuntu sound"
+          src="./themes/Adwaita/status/audio-volume-medium-symbolic.svg"
+          alt="sound"
           className="inline status-symbol w-4 h-4"
         />
       </span>
       <span className="mx-1.5">
         <img
           width="16px" height="16px"
-          src="./themes/Yaru/status/battery-good-symbolic.svg"
-          alt="ubuntu battry"
+          src="./themes/Adwaita/status/battery-good-symbolic.svg"
+          alt="battery"
           className="inline status-symbol w-4 h-4"
         />
       </span>

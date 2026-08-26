@@ -163,7 +163,7 @@ export class Window extends Component {
         return (
             <Draggable
                 axis="both"
-                handle=".bg-ub-window-title"
+                handle=".bg-fd-window-title"
                 grid={[1, 1]}
                 scale={1}
                 onStart={this.changeCursorToMove}
@@ -197,7 +197,7 @@ export default Window
 // Window's title bar
 export function WindowTopBar(props) {
     return (
-        <div className={" relative bg-ub-window-title border-t-2 border-white border-opacity-5 py-1.5 px-3 text-white w-full select-none rounded-b-none"}>
+        <div className={" relative bg-fd-window-title border-t-2 border-white border-opacity-5 py-1.5 px-3 text-white w-full select-none rounded-b-none"}>
             <div className="flex justify-center text-sm font-bold">{props.title}</div>
         </div>
     )
@@ -238,8 +238,8 @@ export function WindowEditButtons(props) {
         <div className="absolute select-none right-0 top-0 mt-1 mr-1 flex justify-center items-center">
             <span className="mx-1.5 bg-white bg-opacity-0 hover:bg-opacity-10 rounded-full flex justify-center mt-1 h-5 w-5 items-center" onClick={props.minimize}>
                 <img
-                    src="./themes/Yaru/window/window-minimize-symbolic.svg"
-                    alt="ubuntu window minimize"
+                    src="./themes/Adwaita/window/window-minimize-symbolic.svg"
+                    alt="window minimize"
                     className="h-5 w-5 inline"
                 />
             </span>
@@ -248,25 +248,25 @@ export function WindowEditButtons(props) {
                     ?
                     <span className="mx-2 bg-white bg-opacity-0 hover:bg-opacity-10 rounded-full flex justify-center mt-1 h-5 w-5 items-center" onClick={props.maximize}>
                         <img
-                            src="./themes/Yaru/window/window-restore-symbolic.svg"
-                            alt="ubuntu window restore"
+                            src="./themes/Adwaita/window/window-restore-symbolic.svg"
+                            alt="window restore"
                             className="h-5 w-5 inline"
                         />
                     </span>
                     :
                     <span className="mx-2 bg-white bg-opacity-0 hover:bg-opacity-10 rounded-full flex justify-center mt-1 h-5 w-5 items-center" onClick={props.maximize}>
                         <img
-                            src="./themes/Yaru/window/window-maximize-symbolic.svg"
-                            alt="ubuntu window maximize"
+                            src="./themes/Adwaita/window/window-maximize-symbolic.svg"
+                            alt="window maximize"
                             className="h-5 w-5 inline"
                         />
                     </span>
                 )
             }
-            <button tabIndex="-1" id={`close-${props.id}`} className="mx-1.5 focus:outline-none cursor-default bg-ub-orange bg-opacity-90 hover:bg-opacity-100 rounded-full flex justify-center mt-1 h-5 w-5 items-center" onClick={props.close}>
+            <button tabIndex="-1" id={`close-${props.id}`} className="mx-1.5 focus:outline-none cursor-default bg-fd-blue bg-opacity-90 hover:bg-opacity-100 rounded-full flex justify-center mt-1 h-5 w-5 items-center" onClick={props.close}>
                 <img
-                    src="./themes/Yaru/window/window-close-symbolic.svg"
-                    alt="ubuntu window close"
+                    src="./themes/Adwaita/window/window-close-symbolic.svg"
+                    alt="window close"
                     className="h-5 w-5 inline"
                 />
             </button>
@@ -289,7 +289,7 @@ export class WindowMainScreen extends Component {
     }
     render() {
         return (
-            <div className={"w-full flex-grow z-20 max-h-full overflow-y-auto windowMainScreen" + (this.state.setDarkBg ? " bg-ub-drk-abrgn " : " bg-ub-cool-grey")}>
+            <div className={"w-full flex-grow z-20 max-h-full overflow-y-auto windowMainScreen" + (this.state.setDarkBg ? " bg-fd-drk-navy " : " bg-fd-cool-grey")}>
                 {this.props.addFolder ? displayTerminal(this.props.addFolder, this.props.openApp) : this.props.screen()}
             </div>
         )

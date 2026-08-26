@@ -15,12 +15,12 @@ export class Trash extends Component {
             },
             {
                 name: "node_modules",
-                icon: "./themes/Yaru/system/folder.png"
+                icon: "./themes/Adwaita/system/folder.png"
             },
 
             {
                 name: "abandoned project",
-                icon: "./themes/Yaru/system/folder.png"
+                icon: "./themes/Adwaita/system/folder.png"
             },
             {
                 name: "18BCP127 assignment name.zip",
@@ -28,11 +28,11 @@ export class Trash extends Component {
             },
             {
                 name: "project final",
-                icon: "./themes/Yaru/system/folder.png"
+                icon: "./themes/Adwaita/system/folder.png"
             },
             {
                 name: "project ultra-final",
-                icon: "./themes/Yaru/system/folder.png"
+                icon: "./themes/Adwaita/system/folder.png"
             },
 
         ];
@@ -53,7 +53,7 @@ export class Trash extends Component {
         // icon
         $(e.target).children().get(0).classList.toggle("opacity-60");
         // file name
-        $(e.target).children().get(1).classList.toggle("bg-ub-orange");
+        $(e.target).children().get(1).classList.toggle("bg-fd-blue");
     }
 
     emptyTrash = () => {
@@ -64,7 +64,7 @@ export class Trash extends Component {
     emptyScreen = () => {
         return (
             <div className="flex-grow flex flex-col justify-center items-center">
-                <img className=" w-24" src="./themes/Yaru/status/user-trash-symbolic.svg" alt="Ubuntu Trash" />
+                <img className=" w-24" src="./themes/Adwaita/status/user-trash-symbolic.svg" alt="Trash" />
                 <span className="font-bold mt-4 text-xl px-1 text-gray-400">Trash is Empty</span>
             </div>
         );
@@ -78,7 +78,7 @@ export class Trash extends Component {
                         return (
                             <div key={index} tabIndex="1" onFocus={this.focusFile} onBlur={this.focusFile} className="flex flex-col items-center text-sm outline-none w-16 my-2 mx-4">
                                 <div className="w-16 h-16 flex items-center justify-center">
-                                    <img src={item.icon} alt="Ubuntu File Icons" />
+                                    <img src={item.icon} alt="Fedora File Icons" />
                                 </div>
                                 <span className="text-center rounded px-0.5">{item.name}</span>
                             </div>
@@ -91,8 +91,8 @@ export class Trash extends Component {
 
     render() {
         return (
-            <div className="w-full h-full flex flex-col bg-ub-cool-grey text-white select-none">
-                <div className="flex items-center justify-between w-full bg-ub-warm-grey bg-opacity-40 text-sm">
+            <div className="w-full h-full flex flex-col bg-fd-cool-grey text-white select-none">
+                <div className="flex items-center justify-between w-full bg-fd-light-grey bg-opacity-40 text-sm">
                     <span className="font-bold ml-2">Trash</span>
                     <div className="flex">
                         <div className="border border-black bg-black bg-opacity-50 px-3 py-1 my-1 mx-1 rounded text-gray-300">Restore</div>

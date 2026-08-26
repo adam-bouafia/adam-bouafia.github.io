@@ -56,9 +56,9 @@ export class Terminal extends Component {
             <React.Fragment key={id}>
                 <div className="flex w-full h-5">
                     <div className="flex">
-                        <div className=" text-ubt-green">adam@Dell</div>
+                        <div className=" text-fdt-green">adam@fedora</div>
                         <div className="text-white mx-px font-medium">:</div>
-                        <div className=" text-ubt-blue">{this.current_directory}</div>
+                        <div className=" text-fdt-blue">{this.current_directory}</div>
                         <div className="text-white mx-px font-medium mr-1">$</div>
                     </div>
                     <div id="cmd" onClick={this.focusCursor} className=" bg-transperent relative flex-1 overflow-hidden">
@@ -163,7 +163,7 @@ export class Terminal extends Component {
         files.push(`<div class="flex justify-start flex-wrap">`)
         this.child_directories[parent].forEach(file => {
             files.push(
-                `<span class="font-bold mr-2 text-ubt-blue">'${file}'</span>`
+                `<span class="font-bold mr-2 text-fdt-blue">'${file}'</span>`
             )
         });
         files.push(`</div>`)
@@ -353,7 +353,7 @@ export class Terminal extends Component {
 
     render() {
         return (
-            <div className="h-full w-full bg-ub-drk-abrgn text-white text-sm font-bold" id="terminal-body">
+            <div className="h-full w-full bg-fd-drk-navy text-white text-sm font-bold" id="terminal-body">
                 {
                     this.state.terminal
                 }

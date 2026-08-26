@@ -5,7 +5,7 @@ import LockScreen from './screen/lock_screen';
 import Navbar from './screen/navbar';
 import ReactGA from 'react-ga4';
 
-export default class Ubuntu extends Component {
+export default class Fedora extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -90,7 +90,7 @@ export default class Ubuntu extends Component {
 
 		ReactGA.event({
 			category: `Screen Change`,
-			action: `Switched off the Ubuntu`
+			action: `Switched off the Fedora`
 		});
 
 		document.getElementById('status-bar').blur();

@@ -3,7 +3,7 @@ import BackgroundImage from '../util components/background-image';
 import SideBar from './side_bar';
 import apps from '../../apps.config';
 import Window from '../base/window';
-import UbuntuApp from '../base/ubuntu_app';
+import FedoraApp from '../base/fedora_app';
 import AllApplications from '../screen/all-applications'
 import DesktopMenu from '../context menus/desktop-menu';
 import DefaultMenu from '../context menus/default';
@@ -59,7 +59,7 @@ export class Desktop extends Component {
                 apps.push({
                     id: `new-folder-${folder.id}`,
                     title: folder.name,
-                    icon: './themes/Yaru/system/folder.png',
+                    icon: './themes/Adwaita/system/folder.png',
                     disabled: true,
                     favourite: false,
                     desktop_shortcut: true,
@@ -244,7 +244,7 @@ export class Desktop extends Component {
                 }
 
                 appsJsx.push(
-                    <UbuntuApp key={index} {...props} />
+                    <FedoraApp key={index} {...props} />
                 );
             }
         });
@@ -453,7 +453,7 @@ export class Desktop extends Component {
         apps.push({
             id: `new-folder-${folder_id}`,
             title: folder_name,
-            icon: './themes/Yaru/system/folder.png',
+            icon: './themes/Adwaita/system/folder.png',
             disabled: true,
             favourite: false,
             desktop_shortcut: true,
@@ -480,14 +480,14 @@ export class Desktop extends Component {
         }
 
         return (
-            <div className="absolute rounded-md top-1/2 left-1/2 text-center text-white font-light text-sm bg-ub-cool-grey transform -translate-y-1/2 -translate-x-1/2 sm:w-96 w-3/4 z-50">
+            <div className="absolute rounded-md top-1/2 left-1/2 text-center text-white font-light text-sm bg-fd-cool-grey transform -translate-y-1/2 -translate-x-1/2 sm:w-96 w-3/4 z-50">
                 <div className="w-full flex flex-col justify-around items-start pl-6 pb-8 pt-6">
                     <span>New folder name</span>
-                    <input className="outline-none mt-5 px-1 w-10/12  context-menu-bg border-2 border-yellow-700 rounded py-0.5" id="folder-name-input" type="text" autoComplete="off" spellCheck="false" autoFocus={true} />
+                    <input className="outline-none mt-5 px-1 w-10/12  context-menu-bg border-2 border-fdb-blue rounded py-0.5" id="folder-name-input" type="text" autoComplete="off" spellCheck="false" autoFocus={true} />
                 </div>
                 <div className="flex">
-                    <div onClick={addFolder} className="w-1/2 px-4 py-2 border border-gray-900 border-opacity-50 border-r-0 hover:bg-ub-warm-grey hover:bg-opacity-10 hover:border-opacity-50">Create</div>
-                    <div onClick={removeCard} className="w-1/2 px-4 py-2 border border-gray-900 border-opacity-50 hover:bg-ub-warm-grey hover:bg-opacity-10 hover:border-opacity-50">Cancel</div>
+                    <div onClick={addFolder} className="w-1/2 px-4 py-2 border border-gray-900 border-opacity-50 border-r-0 hover:bg-fd-light-grey hover:bg-opacity-10 hover:border-opacity-50">Create</div>
+                    <div onClick={removeCard} className="w-1/2 px-4 py-2 border border-gray-900 border-opacity-50 hover:bg-fd-light-grey hover:bg-opacity-10 hover:border-opacity-50">Cancel</div>
                 </div>
             </div>
         );
@@ -505,7 +505,7 @@ export class Desktop extends Component {
                 {/* Background Image */}
                 <BackgroundImage img={this.props.bg_image_name} />
 
-                {/* Ubuntu Side Menu Bar */}
+                {/* Fedora Side Menu Bar */}
                 <SideBar apps={apps}
                     hide={this.state.hideSideBar}
                     hideSideBar={this.hideSideBar}

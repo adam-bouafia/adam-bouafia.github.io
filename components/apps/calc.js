@@ -68,9 +68,9 @@ export class Calc extends Component {
         return (
 
             <React.Fragment key={id}>
-                <div className=" flex p-2 text-ubt-grey opacity-100 mt-1 float-left font-normal "></div>
+                <div className=" flex p-2 text-fdt-grey opacity-100 mt-1 float-left font-normal "></div>
                 <div className="flex w-full h-5">
-                        <div className=" flex text-ubt-green h-1 mr-2"> {';'} </div>
+                        <div className=" flex text-fdt-green h-1 mr-2"> {';'} </div>
                     <div id="cmd" onClick={this.focusCursor} className=" bg-transperent relative flex-1 overflow-hidden">
                         <span id={`show-calculator-${id}`} className=" float-left whitespace-pre pb-1 opacity-100 font-normal tracking-wider"></span>
                         <div id={`cursor-${id}`} className=" float-left mt-1 w-1.5 h-3.5 bg-white"></div>
@@ -237,11 +237,11 @@ export class Calc extends Component {
 
     render() {
         return (
-            <div className="h-full w-full bg-ub-drk-abrgn text-ubt-grey opacity-100 p-1 float-left font-normal">
+            <div className="h-full w-full bg-fd-drk-navy text-fdt-grey opacity-100 p-1 float-left font-normal">
                 <div>C-style arbitary precision calculator (version 2.12.7.2)</div>
                 <div>Calc is open software.</div>
                 <div>[ type "exit" to exit, "clear" to clear, "help" for help.]</div>
-            <div className="text-white text-sm font-bold bg-ub-drk-abrgn" id="calculator-body">
+            <div className="text-white text-sm font-bold bg-fd-drk-navy" id="calculator-body">
                 {this.state.terminal}
             </div>
             </div>

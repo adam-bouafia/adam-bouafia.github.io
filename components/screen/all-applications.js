@@ -1,5 +1,5 @@
 import React from 'react';
-import UbuntuApp from '../base/ubuntu_app';
+import FedoraApp from '../base/fedora_app';
 
 export class AllApplications extends React.Component {
     constructor() {
@@ -54,7 +54,7 @@ export class AllApplications extends React.Component {
             }
 
             appsJsx.push(
-                <UbuntuApp key={index} {...props} />
+                <FedoraApp key={index} {...props} />
             );
         });
         return appsJsx;
@@ -86,12 +86,12 @@ export class AllApplications extends React.Component {
                 <div className={"flex align-center justify-center w-full fixed bottom-0 mb-15 pr-20  md:pr-20 "}>
                     <div className={"w-1/4 text-center group text-white bg-transparent cursor-pointer items-center"} onClick={this.handleSwitch.bind(this, 1)}>
                         <h4>Frequent</h4>
-                        {this.state.category === 1 ? <div className={"h-1 mt-1 bg-ub-orange self-center"} />
+                        {this.state.category === 1 ? <div className={"h-1 mt-1 bg-fd-blue self-center"} />
                             : <div className={"h-1 mt-1 bg-transparent group-hover:bg-white "} />}
                     </div>
                     <div className={"w-1/4 text-center group text-white bg-transparent cursor-pointer items-center"} onClick={this.handleSwitch.bind(this, 0)}>
                         <h4>All</h4>
-                        {this.state.category === 0 ? <div className={"h-1 mt-1 bg-ub-orange self-center"} />
+                        {this.state.category === 0 ? <div className={"h-1 mt-1 bg-fd-blue self-center"} />
                             : <div className={"h-1 mt-1 bg-transparent group-hover:bg-white"} />}
                     </div>
                 </div>
