@@ -300,7 +300,7 @@ function Projects() {
         },
         {
             name: "smarthome-k8s - Self-Hosted Home Automation with a Kubernetes Operator",
-            date: "Sep 2026",
+            date: "Aug 2026",
             link: "https://github.com/adam-bouafia/smarthome-k8s",
             description: [
                 "Home automation on a two-node k3s cluster with no cloud services or vendor accounts: Mosquitto MQTT as the message bus, Home Assistant, Zigbee2MQTT and kube-prometheus-stack for metrics. Includes a custom Kubernetes operator in Go that manages the whole stack as a single custom resource.",
