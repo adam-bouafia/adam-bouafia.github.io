@@ -290,6 +290,33 @@ const SKILL_GROUPS = [
 function Projects() {
     const project_list = [
         {
+            name: "PulseBoard - Status Page on Kubernetes with GitLab CI/CD",
+            date: "Sep 2026",
+            link: "https://github.com/adam-bouafia/pulseboard",
+            description: [
+                "Hosted status page built as two containerised microservices: a Node/Express REST API with health endpoints for Kubernetes probes, and an nginx frontend reverse-proxying /api/ to the backend Service. Shipped through a GitLab CI pipeline (build, test, Trivy security scan) and deployed to Kubernetes with Deployments, Services and ConfigMaps, plus break-it drills for cluster troubleshooting.",
+            ],
+            domains: ["kubernetes", "gitlab-ci", "docker", "nginx", "nodejs", "trivy"]
+        },
+        {
+            name: "smarthome-k8s - Self-Hosted Home Automation with a Kubernetes Operator",
+            date: "Sep 2026",
+            link: "https://github.com/adam-bouafia/smarthome-k8s",
+            description: [
+                "Home automation on a two-node k3s cluster with no cloud services or vendor accounts: Mosquitto MQTT as the message bus, Home Assistant, Zigbee2MQTT and kube-prometheus-stack for metrics. Includes a custom Kubernetes operator in Go that manages the whole stack as a single custom resource.",
+            ],
+            domains: ["kubernetes", "k3s", "go", "operator", "mqtt", "prometheus", "self-hosted"]
+        },
+        {
+            name: "Fedora Workstation Portfolio (this site)",
+            date: "Sep 2026",
+            link: "https://github.com/adam-bouafia/adam-bouafia.github.io",
+            description: [
+                "Interactive portfolio simulating a Fedora Workstation desktop with draggable windowed apps and a terminal. Built with Next.js and Tailwind CSS as a static export, themed on the Fedora brand and GNOME Adwaita palettes, and deployed to GitHub Pages via GitHub Actions.",
+            ],
+            domains: ["next.js", "react", "tailwindcss", "github-actions"]
+        },
+        {
             name: "Azure Landing Zone - Production MSP Infrastructure",
             date: "Feb 2026",
             link: "https://github.com/adam-bouafia/Azure-Landing-Zone",
@@ -330,9 +357,9 @@ function Projects() {
             date: "Sep 2025",
             link: "https://github.com/adam-bouafia/Gnome-Shell-CO2-Consumption-monitor-extension",
             description: [
-                "Published on the GNOME Extensions store. Tracks real-time CO2 emissions from system usage, with per-application monitoring, ElectricityMaps API integration and historical data export.",
+                "Published on the GNOME Extensions store. Estimates real-time CO2 emissions in pure GJS with no Python or background daemons: per-application attribution via /proc sampling, live grid carbon intensity from ElectricityMaps, today/week/month totals and CSV history export, with Libadwaita preferences.",
             ],
-            domains: ["gnome", "javascript", "sustainability", "linux"]
+            domains: ["gnome", "javascript", "sustainability", "linux", "green-it"]
         },
         {
             name: "Think Before You Save (Hackathon Winner - TU Delft)",
@@ -513,7 +540,10 @@ function Projects() {
         "firebase auth": "text-red-400 border-red-400",
         "firestore": "text-red-500 border-red-500",
         "flutter": "text-blue-400 border-blue-400",
+        "github-actions": "text-gray-300 border-gray-300",
+        "gitlab-ci": "text-orange-400 border-orange-400",
         "gnome": "text-slate-300 border-slate-300",
+        "go": "text-cyan-300 border-cyan-300",
         "grafana": "text-orange-300 border-orange-300",
         "green-it": "text-green-400 border-green-400",
         "hackathon": "text-orange-400 border-orange-400",
@@ -524,6 +554,7 @@ function Projects() {
         "influxdb": "text-red-500 border-red-500",
         "iot": "text-teal-400 border-teal-400",
         "javascript": "text-yellow-300 border-yellow-300",
+        "k3s": "text-yellow-400 border-yellow-400",
         "kubernetes": "text-blue-400 border-blue-400",
         "large-language-models": "text-purple-400 border-purple-400",
         "linux": "text-amber-300 border-amber-300",
@@ -534,10 +565,14 @@ function Projects() {
         "mobile-app": "text-rose-300 border-rose-300",
         "mqtt": "text-gray-400 border-gray-400",
         "next.js": "text-purple-600 border-purple-600",
+        "nginx": "text-green-500 border-green-500",
         "nlp": "text-green-400 border-green-400",
         "node-red": "text-orange-500 border-orange-500",
+        "nodejs": "text-lime-500 border-lime-500",
+        "operator": "text-violet-400 border-violet-400",
         "optimization": "text-pink-900 border-pink-900",
         "performance-analysis": "text-red-300 border-red-300",
+        "prometheus": "text-orange-500 border-orange-500",
         "pypi": "text-yellow-300 border-yellow-300",
         "python": "text-green-200 border-green-200",
         "q-learning": "text-yellow-700 border-yellow-700",
@@ -548,6 +583,7 @@ function Projects() {
         "safety": "text-rose-400 border-rose-400",
         "sass": "text-pink-400 border-pink-400",
         "scenic": "text-cyan-500 border-cyan-500",
+        "self-hosted": "text-teal-200 border-teal-200",
         "soap": "text-purple-200 border-purple-200",
         "software-quality": "text-teal-300 border-teal-300",
         "spring-boot": "text-blue-100 border-blue-100",
@@ -556,6 +592,7 @@ function Projects() {
         "telegram-bot": "text-blue-700 border-blue-700",
         "tensorflow": "text-yellow-600 border-yellow-600",
         "text-analysis": "text-yellow-200 border-yellow-200",
+        "trivy": "text-sky-300 border-sky-300",
         "uml": "text-pink-500 border-pink-500",
         "vrp": "text-red-800 border-red-800",
     };
