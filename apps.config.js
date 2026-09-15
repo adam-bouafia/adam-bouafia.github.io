@@ -7,6 +7,7 @@ import { displayTrash } from './components/apps/trash';
 import { displayGedit } from './components/apps/gedit';
 import { displayAboutAdam } from './components/apps/adam';
 import { displayTerminalCalc } from './components/apps/calc';
+import { displayCertificates } from './components/apps/certificates';
 
 const apps = [
     {
@@ -35,6 +36,15 @@ const apps = [
         favourite: true,
         desktop_shortcut: true,
         screen: displayAboutAdam,
+    },
+    {
+        id: "certificates",
+        title: "Certificates",
+        icon: './themes/Adwaita/apps/certificates.svg',
+        disabled: false,
+        favourite: false,
+        desktop_shortcut: true,
+        screen: displayCertificates,
     },
     {
         id: "vscode",
