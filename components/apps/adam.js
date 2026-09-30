@@ -290,6 +290,33 @@ const SKILL_GROUPS = [
 function Projects() {
     const project_list = [
         {
+            name: "FirstCall - AI First Responder for Kubernetes Incidents",
+            date: "Sep 2026",
+            link: "https://github.com/adam-bouafia/firstcall",
+            description: [
+                "Built for the AI Accel hackathon. Runs in-cluster and, when a workload breaks, collects what an on-call engineer would check in the first 15 minutes (pod spec, events, current and previous logs, metrics, rollout diff), redacts secrets, then asks an open-weight model for a diagnosis backed by quoted evidence. Fixes are allow-listed, server dry-run and applied only after a person approves. Ships as a Helm chart with Prometheus metrics and a Grafana dashboard.",
+            ],
+            domains: ["kubernetes", "python", "helm", "prometheus", "grafana", "large-language-models", "hackathon"]
+        },
+        {
+            name: "repo-sentinel - Autonomous Repository Auditor",
+            date: "Sep 2026",
+            link: "https://github.com/adam-bouafia/repo-sentinel",
+            description: [
+                "An agent on the Claude Agent SDK that audits GitHub repositories for failing CI, outdated dependencies and upstream drift, then opens guarded fix PRs. The agent has no shell and no local file access: its only tools are read-only calls bound to the repo under audit, and PR rules are enforced in code, not in the prompt. Keeps state between runs so each finding is marked new, open since a date, or resolved.",
+            ],
+            domains: ["python", "ai-agents", "github-actions", "devops"]
+        },
+        {
+            name: "CKA 2026 Curriculum Update (merged upstream)",
+            date: "Sep 2026",
+            link: "https://github.com/walidshaari/Kubernetes-Certified-Administrator/pull/63",
+            description: [
+                "Pull request merged into Walid Shaari's CKA study guide (4.4k stars), updating it from the 2023 objectives to the v1.35 curriculum across 15 files. Corrected etcd, kubeadm upgrade and kubectl examples against current Kubernetes documentation, replaced dead links, and added a troubleshooting method and scenario bank for the 30% Troubleshooting domain plus exam-day tactics and study guides.",
+            ],
+            domains: ["kubernetes", "open-source", "documentation"]
+        },
+        {
             name: "PulseBoard - Status Page on Kubernetes with GitLab CI/CD",
             date: "Sep 2026",
             link: "https://github.com/adam-bouafia/pulseboard",
@@ -513,6 +540,7 @@ function Projects() {
     const tag_colors = {
         "3d-modeling": "text-green-800 border-green-800",
         "ai": "text-indigo-600 border-indigo-600",
+        "ai-agents": "text-fuchsia-400 border-fuchsia-400",
         "alpha-beta": "text-purple-700 border-purple-700",
         "angular": "text-red-400 border-red-400",
         "apache-cxf": "text-pink-800 border-pink-800",
@@ -531,6 +559,7 @@ function Projects() {
         "devops": "text-emerald-300 border-emerald-300",
         "django": "text-green-600 border-green-600",
         "docker": "text-blue-200 border-blue-200",
+        "documentation": "text-stone-300 border-stone-300",
         "eclipse": "text-gray-500 border-gray-500",
         "emf": "text-red-700 border-red-700",
         "energy-efficiency": "text-lime-400 border-lime-400",
@@ -569,6 +598,7 @@ function Projects() {
         "nlp": "text-green-400 border-green-400",
         "node-red": "text-orange-500 border-orange-500",
         "nodejs": "text-lime-500 border-lime-500",
+        "open-source": "text-emerald-300 border-emerald-300",
         "operator": "text-violet-400 border-violet-400",
         "optimization": "text-pink-900 border-pink-900",
         "performance-analysis": "text-red-300 border-red-300",
