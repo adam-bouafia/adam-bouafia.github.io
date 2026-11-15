@@ -290,6 +290,51 @@ const SKILL_GROUPS = [
 function Projects() {
     const project_list = [
         {
+            name: "aks-secure-platform-lab - Secure AKS Platform End to End",
+            date: "Nov 2026",
+            link: "https://github.com/adam-bouafia/aks-platform-lab",
+            description: [
+                "A fake banking API secured at every layer on Azure Kubernetes Service. A hardened container image (1.32 GB / 183 CVEs down to 19.5 MB / 0 CVEs), the whole Azure foundation in Terraform (AKS on Azure CNI Overlay with Cilium, Key Vault, workload identity federation - no password anywhere), zero-trust NetworkPolicy, Kyverno admission guardrails, a kube-prometheus-stack observability stack, and a Trivy Operator vulnerability loop. Every control was applied to a live cluster and verified directly: real curl tests, real policy rejections, real CVE findings.",
+            ],
+            domains: ["azure", "kubernetes", "terraform", "devsecops", "kyverno", "prometheus"]
+        },
+        {
+            name: "The Illiterates - Personal Learning Journal",
+            date: "Nov 2026",
+            link: "https://github.com/adam-bouafia/The-illiterates",
+            description: [
+                "A MkDocs Material site documenting hands-on courses written from scratch: Kubernetes fundamentals, Docker, and building the secure AKS platform above - theory chapters plus a full build log with screenshots for every step. Published to Read the Docs.",
+            ],
+            domains: ["mkdocs", "documentation", "kubernetes", "docker"]
+        },
+        {
+            name: "php-gitops-lab - GitOps Delivery Pipeline",
+            date: "Oct 2026",
+            link: "https://github.com/adam-bouafia/php-gitops-lab",
+            description: [
+                "GitOps delivery pipeline for a PHP-FPM/nginx app: GitLab CI builds and scans the image, Flux reconciles it onto Kubernetes, and a Helm chart ships the app alongside kube-prometheus-stack for metrics.",
+            ],
+            domains: ["gitops", "flux", "helm", "gitlab-ci", "kubernetes", "php"]
+        },
+        {
+            name: "MetJou - Shake-to-Alert Personal Safety App",
+            date: "Oct 2026",
+            link: "https://github.com/adam-bouafia/metjou",
+            description: [
+                "A Flutter personal-safety app with a FastAPI + pgvector backend (metjou-backend) that answers \"what should I do?\" with quoted sources only, never generated text. Feature-first architecture, localised into five languages, with on-device Bluetooth tracker detection.",
+            ],
+            domains: ["flutter", "dart", "fastapi", "pgvector", "mobile"]
+        },
+        {
+            name: "JobFinder - NL Job Search & Sponsor Matching Tool",
+            date: "Oct 2026",
+            link: "https://github.com/adam-bouafia/JobFinder",
+            description: [
+                "A Python CLI and local web UI that cross-references job postings against the Netherlands' IND recognised-sponsor register, parses resumes, and scores job fit - plus a Chrome extension that overlays sponsor status directly on LinkedIn and Indeed listings.",
+            ],
+            domains: ["python", "fastapi", "job-search", "chrome-extension"]
+        },
+        {
             name: "FirstCall - AI First Responder for Kubernetes Incidents",
             date: "Sep 2026",
             link: "https://github.com/adam-bouafia/firstcall",
