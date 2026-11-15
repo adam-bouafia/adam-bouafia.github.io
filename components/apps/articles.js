@@ -2,12 +2,28 @@ import React, { useState } from 'react';
 
 const ARTICLES = [
     {
+        id: "kubernetes-basics-101",
+        title: "Kubernetes Basics 101",
+        date: "29 March 2026",
+        summary: "What Kubernetes is, the architecture, core objects, networking, config and secrets, storage, monitoring, and real-world patterns - from scratch.",
+        tags: ["Kubernetes", "Fundamentals"],
+        url: "https://the-illiterates.readthedocs.io/en/latest/01-kubernetes-basics-101/",
+    },
+    {
+        id: "docker-introduction",
+        title: "Docker Introduction",
+        date: "25 April 2026",
+        summary: "Building and running containers, Dockerfile anatomy, and Docker Compose - the fundamentals behind every container-based project since.",
+        tags: ["Docker", "Fundamentals"],
+        url: "https://the-illiterates.readthedocs.io/en/latest/02-docker-introduction/",
+    },
+    {
         id: "secure-aks-platform",
-        title: "Building a Secure AKS Platform, From the Container Image to the Network Policy",
-        date: "November 2026",
+        title: "Building a Secure AKS Platform",
+        date: "14 November 2026",
         summary: "A hardened image, Terraform-built Azure foundation, workload identity with no password anywhere, zero-trust NetworkPolicy, Kyverno guardrails, and a vulnerability loop - every control applied to a real, running AKS cluster and verified live.",
         tags: ["Azure", "Kubernetes", "DevSecOps", "Terraform"],
-        file: "./files/articles/building-a-secure-aks-platform.html",
+        url: "https://the-illiterates.readthedocs.io/en/latest/03-secure-aks-platform/",
     },
 ];
 
@@ -22,11 +38,11 @@ export function Articles() {
                         &larr; Back
                     </button>
                     <span className="truncate mx-2 font-medium">{open.title}</span>
-                    <a href={open.file} target="_blank" rel="noreferrer" className="px-2 py-0.5 rounded hover:bg-white hover:bg-opacity-10 whitespace-nowrap">
+                    <a href={open.url} target="_blank" rel="noreferrer" className="px-2 py-0.5 rounded hover:bg-white hover:bg-opacity-10 whitespace-nowrap">
                         Open in new tab
                     </a>
                 </div>
-                <iframe className="flex-grow w-full bg-white" src={open.file} title={open.title} frameBorder="0"></iframe>
+                <iframe className="flex-grow w-full bg-white" src={open.url} title={open.title} frameBorder="0"></iframe>
             </div>
         );
     }
@@ -34,7 +50,9 @@ export function Articles() {
     return (
         <div className="w-full h-full flex flex-col bg-fd-cool-grey text-white select-none overflow-y-auto windowMainScreen">
             <div className="px-5 pt-4 pb-2 text-lg font-medium">Articles</div>
-            <div className="px-5 pb-3 text-xs text-gray-400">Click an article to read it.</div>
+            <div className="px-5 pb-3 text-xs text-gray-400">
+                From <a href="https://the-illiterates.readthedocs.io/" target="_blank" rel="noreferrer" className="text-fdt-cyan hover:underline">The Illiterates</a>, my learning journal. Click one to read it.
+            </div>
             <div className="flex flex-wrap justify-start px-3">
                 {ARTICLES.map((post) => (
                     <div
