@@ -8,7 +8,7 @@ const BASE = [
             date: "Nov 2026",
             link: "https://rackbench.vercel.app",
             description: [
-                "An interactive way to learn how a data center rack is built, tested and shipped. 25 animated lessons in seven chapters, from what is inside a two-socket server to GPU racks: BMCs over IPMI and Redfish, network boot, firmware updates, cabling checks with LLDP, burn-in and fault finding, each step drawn as an isometric diagram with the real packets and commands. Rack Shift, a game, runs one shift on an integration floor: build three racks by the rules, check the cabling, power on, burn in, fix and retest, write the report and ship. Behind every lesson is rackbench-lab: a three-node rack on KVM with emulated BMCs, OpenBMC in QEMU, iPXE network boot, a BIOS-update drill and a fault injector with 11 faults.",
+                "An interactive way to learn how a data center rack is built, tested and shipped. A data center explorer zooms from the data hall (aisles, cooling, UPS, busways) into a row, a rack and a server with the lid off, every part linked to its lessons. 25 animated lessons in seven chapters, from what is inside a two-socket server to GPU racks: BMCs over IPMI and Redfish, network boot, firmware updates, cabling checks with LLDP, burn-in and fault finding, each step drawn as an isometric diagram with the real packets and commands. Rack Shift, a game, runs one shift on an integration floor: build three racks by the rules, check the cabling, power on, burn in, fix and retest, write the report and ship. Behind every lesson is rackbench-lab: a three-node rack on KVM with emulated BMCs, OpenBMC in QEMU, iPXE network boot, a BIOS-update drill and a fault injector with 11 faults.",
             ],
             domains: ["data-center", "ipmi", "redfish", "openbmc", "kvm", "bash", "react", "typescript"]
         },
@@ -381,7 +381,7 @@ const shots = (dir, n) => Array.from({ length: n }, (_, i) => `./images/projects
 
 // Keyed by the project's link. cats: first one sets the icon colour.
 const META = {
-    "https://rackbench.vercel.app": { cats: ["cloud", "tools"], glyph: "rack", badges: ["New", "Live site"], live: "https://rackbench.vercel.app", repo: GH + "rackbench", extra: [{ label: "Lab on GitHub", url: GH + "rackbench-lab" }], shots: shots("rackbench", 5) },
+    "https://rackbench.vercel.app": { cats: ["cloud", "tools"], glyph: "rack", badges: ["New", "Live site"], live: "https://rackbench.vercel.app", repo: GH + "rackbench", extra: [{ label: "Lab on GitHub", url: GH + "rackbench-lab" }], shots: shots("rackbench", 7) },
     [GH + "daycheck"]: { cats: ["mobile"], glyph: "calendar", docs: "https://adam-bouafia.github.io/daycheck/", shots: shots("daycheck", 3), portrait: true },
     [GH + "aks-platform-lab"]: { cats: ["cloud"], glyph: "shield", shots: shots("aks-secure-platform-lab", 2) },
     [GH + "The-illiterates"]: { cats: ["study"], glyph: "book", badges: ["Docs site"], docs: "https://the-illiterates.readthedocs.io/" },
