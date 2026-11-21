@@ -4,13 +4,13 @@
 
 const BASE = [
         {
-            name: "rackbench - A Server Rack on a Laptop, and an Explorer to Learn It",
+            name: "Rackbench - A Data Center Rack, from Order to Shipping",
             date: "Nov 2026",
             link: "https://rackbench.vercel.app",
             description: [
-                "A three-node server rack on KVM for learning how racks are tested before they ship. The nodes look like two-socket servers (SMBIOS serials, a BIOS version, two NUMA nodes); emulated BMCs answer IPMI and Redfish (virtualbmc, sushy-tools); OpenBMC runs in QEMU as real BMC firmware; iPXE boots machines from the network; a firmware tool drills a rack-wide BIOS update; a fault injector plants 11 kinds of faults. On top sits Rackbench Explorer, an interactive site: 25 animated lessons from server anatomy to GPU racks, a fault hunt, a quiz, a rack builder, cheatsheets, and Rack Shift, a game where you build, cable, power on, burn in, report and ship three racks.",
+                "An interactive way to learn how a data center rack is built, tested and shipped. 25 animated lessons in seven chapters, from what is inside a two-socket server to GPU racks: BMCs over IPMI and Redfish, network boot, firmware updates, cabling checks with LLDP, burn-in and fault finding, each step drawn as an isometric diagram with the real packets and commands. Rack Shift, a game, runs one shift on an integration floor: build three racks by the rules, check the cabling, power on, burn in, fix and retest, write the report and ship. Behind every lesson is rackbench-lab: a three-node rack on KVM with emulated BMCs, OpenBMC in QEMU, iPXE network boot, a BIOS-update drill and a fault injector with 11 faults.",
             ],
-            domains: ["kvm", "libvirt", "ipmi", "redfish", "openbmc", "bash", "react", "typescript"]
+            domains: ["data-center", "ipmi", "redfish", "openbmc", "kvm", "bash", "react", "typescript"]
         },
         {
             name: "aks-secure-platform-lab - Secure AKS Platform End to End",
@@ -381,7 +381,7 @@ const shots = (dir, n) => Array.from({ length: n }, (_, i) => `./images/projects
 
 // Keyed by the project's link. cats: first one sets the icon colour.
 const META = {
-    "https://rackbench.vercel.app": { cats: ["cloud", "tools"], glyph: "rack", badges: ["New", "Live site"], live: "https://rackbench.vercel.app", shots: shots("rackbench", 5) },
+    "https://rackbench.vercel.app": { cats: ["cloud", "tools"], glyph: "rack", badges: ["New", "Live site"], live: "https://rackbench.vercel.app", repo: GH + "rackbench", extra: [{ label: "Lab on GitHub", url: GH + "rackbench-lab" }], shots: shots("rackbench", 5) },
     [GH + "daycheck"]: { cats: ["mobile"], glyph: "calendar", docs: "https://adam-bouafia.github.io/daycheck/", shots: shots("daycheck", 3), portrait: true },
     [GH + "aks-platform-lab"]: { cats: ["cloud"], glyph: "shield", shots: shots("aks-secure-platform-lab", 2) },
     [GH + "The-illiterates"]: { cats: ["study"], glyph: "book", badges: ["Docs site"], docs: "https://the-illiterates.readthedocs.io/" },
@@ -449,7 +449,7 @@ export const PROJECTS = BASE.map((p) => {
         cats: meta.cats || ["study"],
         glyph: meta.glyph,
         badges: meta.badges || [],
-        repo: p.link.startsWith("https://github.com/") ? p.link : null,
+        repo: meta.repo || (p.link.startsWith("https://github.com/") ? p.link : null),
         live: meta.live || null,
         docs: meta.docs || null,
         extra: meta.extra || [],

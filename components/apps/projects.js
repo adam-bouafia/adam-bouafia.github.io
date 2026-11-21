@@ -241,7 +241,7 @@ function Details({ project, onOpen }) {
                 </div>
                 <div className="flex flex-wrap gap-2">
                     {project.live && <LinkButton href={project.live} primary>Open site</LinkButton>}
-                    {project.repo && <LinkButton href={project.repo} primary={!project.live}>{project.repo.includes("/pull/") ? "View pull request" : "View on GitHub"}</LinkButton>}
+                    {project.repo && <LinkButton href={project.repo} primary={!project.live}>{project.repo.includes("/pull/") ? "View pull request" : project.live ? "Source on GitHub" : "View on GitHub"}</LinkButton>}
                     {project.docs && <LinkButton href={project.docs}>Docs</LinkButton>}
                     {project.extra.map((x) => (
                         <LinkButton key={x.url} href={x.url}>
