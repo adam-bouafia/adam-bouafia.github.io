@@ -356,6 +356,13 @@ export class Desktop extends Component {
         // if the app is disabled
         if (this.state.disabled_apps[objId]) return;
 
+        // link shortcuts (LinkedIn, GitHub): those sites refuse to load in a window, so open a new tab
+        const linkApp = apps.find((a) => a.id === objId);
+        if (linkApp && linkApp.url) {
+            window.open(linkApp.url, '_blank', 'noopener,noreferrer');
+            return;
+        }
+
         if (this.state.minimized_windows[objId]) {
             // focus this app's window
             this.focus(objId);

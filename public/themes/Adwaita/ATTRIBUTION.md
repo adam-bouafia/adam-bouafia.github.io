@@ -23,3 +23,7 @@ The remaining icons under `apps/`, `status/`, `system/` and `window/` were inher
 the upstream project this portfolio was forked from. The directory is named `Adwaita` after
 the GNOME icon theme that Fedora Workstation ships, but the files themselves have not been
 replaced with upstream Adwaita assets.
+
+`apps/github.svg` uses the GitHub mark from GitHub's Octicons (`mark-github`, MIT licence) and
+`apps/linkedin.svg` is an original drawing of the LinkedIn "in" mark. Both are trademarks of their
+owners and are used only to link to Adam's own profiles.

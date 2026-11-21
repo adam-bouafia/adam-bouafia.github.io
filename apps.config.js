@@ -67,6 +67,26 @@ const apps = [
         screen: displayArticles,
     },
     {
+        id: "linkedin",
+        title: "LinkedIn",
+        icon: './themes/Adwaita/apps/linkedin.svg',
+        disabled: false,
+        favourite: false,
+        desktop_shortcut: true,
+        url: "https://www.linkedin.com/in/adam-bouafia/",   // opens in a new tab (see openApp in desktop.js)
+        screen: () => null,
+    },
+    {
+        id: "github",
+        title: "GitHub",
+        icon: './themes/Adwaita/apps/github.svg',
+        disabled: false,
+        favourite: false,
+        desktop_shortcut: true,
+        url: "https://github.com/adam-bouafia",
+        screen: () => null,
+    },
+    {
         id: "vscode",
         title: "Visual Studio Code",
         icon: './themes/Adwaita/apps/vscode.png',
