@@ -9,6 +9,7 @@ import { displayAboutAdam } from './components/apps/adam';
 import { displayTerminalCalc } from './components/apps/calc';
 import { displayCertificates } from './components/apps/certificates';
 import { displayArticles } from './components/apps/articles';
+import { displayProjects } from './components/apps/projects';
 
 const apps = [
     {
@@ -37,6 +38,15 @@ const apps = [
         favourite: true,
         desktop_shortcut: true,
         screen: displayAboutAdam,
+    },
+    {
+        id: "projects",
+        title: "Projects",
+        icon: './themes/Adwaita/apps/projects.svg',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: true,
+        screen: displayProjects,
     },
     {
         id: "certificates",

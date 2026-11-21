@@ -20,6 +20,15 @@ and `fdb-` (borders). Icons live in `public/themes/Adwaita/`.
   logo are trademarks of Red Hat, Inc.; they are used here referentially to indicate the
   theme and do not imply endorsement. See `public/themes/Adwaita/ATTRIBUTION.md`.
 
+## Projects
+
+The Projects app (`components/apps/projects.js`) is laid out like GNOME Software: a
+featured carousel, category filters, search, project tiles and a details page with
+screenshots and links. Its data, shared with the Projects tab of About Adam, is in
+`components/apps/projects-data.js`: add a project to the list (newest first), then its
+categories, icon glyph, badges, extra links and screenshots in `META`. Screenshots go in
+`public/images/projects/<project>/1.webp, 2.webp, ...` (WebP, at most 1440 px wide).
+
 To run this on localhost
 type `npm start` and when u are done coding type `npm run build` to build your app.
 
