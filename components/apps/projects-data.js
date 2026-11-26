@@ -4,6 +4,15 @@
 
 const BASE = [
         {
+            name: "Spinline - Indoor Cycling App for Smart Trainers",
+            date: "Nov 2026",
+            link: "https://github.com/adam-bouafia/spinline",
+            description: [
+                "A native iOS app in Swift and SwiftUI for indoor cycling on a smart trainer. It speaks the Bluetooth Fitness Machine Service byte for byte (codecs checked against the Bluetooth SIG specifications), runs structured workouts in ERG mode, and plays a route video whose speed follows the rider's virtual speed while the route's gradient goes to the trainer. Clean Architecture with MVVM and feature modules (one Swift package per feature, view models tested on Linux), an FTMS client actor with a command queue, a CoreBluetooth adapter, and a virtual trainer so everything runs without hardware. 138 tests; GitHub Actions builds it on Linux and macOS, runs UI tests on an iOS simulator with screenshots and a recording, and builds for Mac Catalyst. Released as 0.1.0 with GitFlow.",
+            ],
+            domains: ["swift", "swiftui", "ios", "bluetooth-le", "mvvm", "github-actions", "mobile-app"]
+        },
+        {
             name: "Rackbench - A Data Center Rack, from Order to Shipping",
             date: "Nov 2026",
             link: "https://rackbench.vercel.app",
@@ -382,6 +391,7 @@ const shots = (dir, n) => Array.from({ length: n }, (_, i) => `./images/projects
 // Keyed by the project's link. cats: first one sets the icon colour.
 const META = {
     "https://rackbench.vercel.app": { cats: ["cloud", "tools"], glyph: "rack", badges: ["New", "Live site"], live: "https://rackbench.vercel.app", repo: GH + "rackbench", extra: [{ label: "Lab on GitHub", url: GH + "rackbench-lab" }], shots: shots("rackbench", 7) },
+    [GH + "spinline"]: { cats: ["mobile"], badges: ["New"], extra: [{ label: "Release 0.1.0", url: GH + "spinline/releases/tag/v0.1.0" }], shots: shots("spinline", 5), portrait: true },
     [GH + "daycheck"]: { cats: ["mobile"], glyph: "calendar", docs: "https://adam-bouafia.github.io/daycheck/", shots: shots("daycheck", 3), portrait: true },
     [GH + "aks-platform-lab"]: { cats: ["cloud"], glyph: "shield", shots: shots("aks-secure-platform-lab", 2) },
     [GH + "The-illiterates"]: { cats: ["study"], glyph: "book", badges: ["Docs site"], docs: "https://the-illiterates.readthedocs.io/" },
